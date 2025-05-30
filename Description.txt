@@ -1,0 +1,26 @@
+Web Page Design and Functionality
+Home Page:
+The home page includes a header with a shipping notification and a navigation bar.
+The navigation bar features links to the Home and Contact Us pages, a search icon, and a cart icon.
+A large cover image with an overlay text "SEE OUR LATEST PRODUCTS" and a "Shop Now" button, which redirects to the products page.
+Navigation and Search:
+Clicking on the "Shop Now" button takes users to the products page.
+The search bar can be displayed by clicking the search icon. Users can search for products and close the search bar using a close button.
+Product Display:
+The products page features a grid layout displaying various products. Each product has an image, a hover image, a name, and a price.
+Clicking on a product image redirects to a detailed product page where users can view more information and add the product to their cart.
+Cart and Review:
+Users can add products to their cart from the detailed product pages.
+The Contact Us page allows users to give reviews of the products.
+Footer Section:
+The footer contains a newsletter subscription form where users can enter their email to receive updates and information about the business.
+HTML and CSS Code
+The HTML code structure includes sections for the navigation bar, image container, product grid, search bar, and footer.
+CSS styles are applied to ensure a visually appealing and responsive design:
+       * Flexbox is used for the navigation bar and newsletter form alignment.
+       * Grid layout is used for displaying the products.
+       * Hover effects are implemented for product images and navigation links.
+       * Media queries are used to ensure the website is responsive on different screen sizes.
+JavaScript functions (showSearch and closeSearch) control the display of the search bar.
+Overall, the website is designed to provide a seamless shopping experience for customers, from browsing products to subscribing to newsletters for updates.
+

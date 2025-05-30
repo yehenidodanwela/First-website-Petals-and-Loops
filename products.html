@@ -1,0 +1,335 @@
+<!DOCTYPE htm>
+<html>
+    <head>
+        <title> Petals & Loops </title>
+
+        <style>
+
+            body{
+                margin: 0;
+                background-color: rgb(255, 255, 255);
+            }
+
+            .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: rgb(255, 234, 243);
+        color: black;
+            }
+
+            .navbar .brand-name .x {
+        font-size: 40px;
+        margin: 0 auto;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+
+            }
+            .navbar .brand-name .x:hover{
+        color: rgb(113, 16, 61);
+            }
+
+            .navbar .nav-links {
+        display: flex;
+        gap: 20px;
+            }
+
+            .navbar .nav-links a {
+        text-decoration: none;
+        color: black;
+            }
+
+            .navbar .nav-links a:hover {
+        text-decoration: underline;
+            }
+            
+             .navbar .icons {
+        display: flex;
+        gap: 20px;
+            }
+
+            .navbar .icons .y:hover,.navbar .icons .z:hover {
+        color: black;
+        transform: scale(1.3,1.3);
+            }
+
+            .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 100px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+            }
+
+            .grid-item {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    
+            }
+
+            .grid-item img {
+
+        width: 100%;
+        height: auto; 
+        transition: opacity 0.5s ease;
+        display: block;
+       
+            }
+
+            .grid-item .image-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        z-index: 1;
+    
+            }
+            .grid-item:hover .image-hover {
+        opacity: 1;
+            }
+            .grid-item:hover .image-original {
+        opacity: 0;
+    
+            }
+
+            .product-info {
+        padding: 10px;
+        display: block;
+        
+            }
+
+            .product-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+        text-decoration: none;
+        color: black;
+            }
+
+            .product-name:hover {
+        text-decoration: underline;
+            }
+
+            .product-price {
+        font-size: 16px;
+        color: rgb(113, 16, 61);
+        margin: 0;
+            }
+
+            .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+            bottom: 0;
+            width: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer h2 {
+            margin: 0 0 10px 0; 
+            font-size: 25; 
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .newsletter-form input[type="email"] {
+            padding: 10px 40px 10px 10px;
+            font-size: 15;
+            border: 1px solid white; 
+            border-radius: 4px; 
+            border-top-right-radius:0px;
+            border-bottom-right-radius: 0px;
+            width: 250px;
+            max-width: 100%;
+            outline: none; 
+        }
+
+        .newsletter-form button {
+            padding: 10px 20px;
+            font-size: 15;
+            color: rgb(0, 0, 0);
+            background-color:rgb(135, 157, 185);
+            border: none;
+            border-radius: 4px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            cursor: pointer;
+            border: 1px solid white;
+            
+        }
+
+        .newsletter-form button:hover {
+            background-color: rgb(155, 179, 212);
+        }
+
+        .search-bar {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: 1px solid #000000;
+            padding: 10px;
+            box-shadow: 0px 0px 10px rgba(96, 89, 89, 0.1);
+            z-index: 1000;
+            border-radius: 8px;
+            background-color: rgb(240, 215, 236);
+            
+        }
+
+        .search-bar input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+
+        .search-bar button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(140, 110, 146);
+            border-radius: 8px;
+            color: rgb(255, 255, 255);
+        }
+
+        .search-bar .close-button {
+            background-color: transparent;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: black;
+        }
+
+        </style>
+    </head>
+
+
+    <body>
+        <header>
+            <h1 style="text-align: center; background-color:rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 18px; font-family:caveat; font-weight: 20; padding:6px; margin: 0;"> Worldwide Shipping 🚚 </h1>
+        </header>
+
+        <div class="navbar">
+            <div class="nav-links">
+                <a href="assignment1.html">Home</a>
+                <a href="contacts.html">Contact Us</a>
+            </div>
+            <div class="brand-name"> 
+                <a href="assignment1.html" class="x"> Petals & Loops </a>
+            </div>
+            <div class="icons">
+                <a href="#" class="y" onclick="showSearch()"><i class="fa-search"><img src="pngwing.com (1).png" alt="Search" width="27px" height="27px"></i></a>
+                <a href="cart.html" class="z"><i class="fa-shopping-cart"><img src="pngwing.com.png" alt="Cart" width="31px" height="31px"></i></a>
+            </div>
+        </div>
+
+        <div class="search-bar" id="searchBar" style="display:none;">
+            <input type="text" placeholder="Search...">
+            <button onclick="Search()">Search</button>
+            <button class="close-button" onclick="closeSearch()">X</button>
+        </div>
+
+        
+        <h1 style="text-align: left; color: black; font-size: 30px; padding: 6px; margin-left: 100;margin-top: 40; margin-bottom: 40;">Our Products</h1>
+        
+
+        <div class="grid-container">
+
+            <a href="product1.html" class="grid-item">
+                <img src="20240728_213658.png" alt="product 1" class="image-original" />
+                <img src="20240728_213721.png" alt="hover image 1" class="image-hover"/>
+                <div class="product-info">
+                    <a href="" class="product-name">Peaceful Bliss</a>
+                    <p class="product-price">Rs xxxx LKR</p>
+                </div>
+            </a>
+
+            <a href="product2.html" class="grid-item">
+                <img src="20240728_213758.jpg" alt="product 2" class="image-original"/>
+                <img src="20240728_213906.jpg" alt="hover image 2" class="image-hover"/>
+                <div class="product-info">
+                    <a href="" class="product-name">Sunshine Delight</a>
+                    <p class="product-price">Rs xxxx LKR</p>
+                </div>
+            </a>
+
+            <a href="product3.html" class="grid-item">
+                <img src="20240728_213838.jpg" alt="product 3" class="image-original"/>
+                <img src="20240728_213925.jpg" alt="hover image 3" class="image-hover"/>
+                <div class="product-info">
+                    <a href="" class="product-name">Baby Blush</a>
+                    <p class="product-price">Rs xxxx LKR</p>
+                </div>
+            </a>
+
+            <a href="product4.html" class="grid-item">
+                <img src="20240728_213943.png" alt="product 4" class="image-original"/>
+                <img src="20240728_214002.png" alt="hover image 4" class="image-hover"/>
+                <div class="product-info">
+                    <a href="" class="product-name">Scarlet Romance</a>
+                    <p class="product-price">Rs xxxx LKR</p>
+                </div>
+            </a>
+
+            <a href="product5.html" class="grid-item">
+                <img src="20240728_214042.png" alt="product 4" class="image-original"/>
+                <img src="20240728_214021.png" alt="hover image 4" class="image-hover"/>
+                <div class="product-info">
+                    <a href="" class="product-name">Lavender Dream</a>
+                    <p class="product-price">Rs xxxx LKR</p>
+                </div>
+            </a>
+
+            <a href="product6.html" class="grid-item">
+                <img src="Screenshot 2024-07-28 213119.png" alt="product 4" class="image-original"/>
+                <img src="20240728_213739.png" alt="hover image 4" class="image-hover"/>
+                <div class="product-info">
+                    <a href="" class="product-name">Pure Grace</a>
+                    <p class="product-price">Rs xxxx LKR</p>
+                </div>
+            </a>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <h2> Get notified about our latest updates 💌 </h2>
+                <form class="newsletter-form" action="" method="post">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit"> Subscribe </button>
+                    
+                </form>
+            </div>
+        </footer>
+
+        <script>
+            function showSearch() {
+                document.getElementById('searchBar').style.display = 'block';
+            }
+
+            function closeSearch() {
+                document.getElementById('searchBar').style.display = 'none';
+            }
+        </script>
+
+    </body>
+</html>
