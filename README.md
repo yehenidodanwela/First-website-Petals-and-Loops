@@ -1,4 +1,4 @@
-# E-Commerce Web Page – Petals & Loops 🌸
+# E-Commerce Website – Petals & Loops 🌸
 
 This project is a front-end e-commerce website designed to **sell crochet flower bouquets** under the brand name **Petals & Loops**. It is built using **HTML**, **CSS**, and **JavaScript**, focusing on clean UI, product browsing, and a smooth customer experience
 
